@@ -34,8 +34,3 @@ export async function destroySession() {
   const cookieStore = await cookies();
   cookieStore.delete("session");
 }
-
-export async function requireAuth() {
-  const user = await getSession();
-  return user;
-}
